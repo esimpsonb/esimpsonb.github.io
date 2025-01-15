@@ -1,9 +1,3 @@
-# Mi Blog
-
-¡Bienvenidos a mi blog! Aquí compartiré mis ideas, proyectos y más.
-
----
-
 <style>
 /* Estilos del menú de navegación */
 .navbar {
@@ -14,6 +8,9 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  margin: 0; /* Elimina márgenes */
+  padding: 0; /* Elimina relleno extra */
+  z-index: 1000; /* Asegura que esté encima de otros elementos */
 }
 
 .navbar a {
