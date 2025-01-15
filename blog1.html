@@ -3,8 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog 1</title>
+  <title>Blog 1: Regresión Lineal</title>
   <link rel="stylesheet" href="styles.css">
+  <!-- Incluir MathJax para renderizar LaTeX -->
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
 </head>
 <body>
   <div class="navbar">
@@ -14,11 +18,28 @@
   </div>
 
   <div class="container">
-    <h1>Blog 1</h1>
-    <p>Este es el primer blog!</p>
+    <h1>Blog 1: Regresión Lineal</h1>
+    <p>En este blog exploramos la regresión lineal, una técnica fundamental en estadística y análisis de datos. La regresión lineal se puede modelar de la siguiente manera:</p>
+    
+    <p>
+      \[
+      Y \sim \mathcal{N}(wX + w_0, \sigma^2)
+      \]
+    </p>
+    <p>Esto significa que la variable dependiente \(Y\) sigue una distribución normal con una media \(wX + w_0\) y varianza \(\sigma^2\), donde:</p>
+    <ul>
+      <li>\(w\) es el peso o coeficiente asociado con la variable independiente \(X\),</li>
+      <li>\(w_0\) es el intercepto, y</li>
+      <li>\(\sigma^2\) es la varianza del error.</li>
+    </ul>
+
+    <p>El valor esperado de \(Y\) dado \(X\) se expresa como:</p>
+    <p>
+      \[
+      E[Y|X] = wX + w_0
+      \]
+    </p>
+    <p>Este modelo nos dice que el valor esperado de \(Y\) depende linealmente de \(X\), con una pendiente \(w\) y un intercepto \(w_0\).</p>
   </div>
 </body>
 </html>
-
-
-
