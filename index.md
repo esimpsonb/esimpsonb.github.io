@@ -2,83 +2,72 @@
 
 ¡Bienvenidos a mi blog! Aquí compartiré mis ideas, proyectos y más.
 
-## Primer Post
+---
 
-Este es mi primer post en GitHub Pages. ¡Espero que disfrutes el contenido!
+<style>
+/* Estilos del menú de navegación */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
 
-## Pestañas
+.navbar a:hover {
+  background-color: #575757;
+}
 
-<div class="tabs">
-  <button class="tablinks" onclick="openTab(event, 'Tab1')">Pestaña 1</button>
-  <button class="tablinks" onclick="openTab(event, 'Tab2')">Pestaña 2</button>
-  <button class="tablinks" onclick="openTab(event, 'Tab3')">Pestaña 3</button>
+/* Estilo de las secciones */
+.section {
+  display: none;
+  padding: 20px;
+}
+
+.section.active {
+  display: block;
+}
+</style>
+
+<div class="navbar">
+  <a href="#" onclick="switchSection('inicio')">Inicio</a>
+  <a href="#" onclick="switchSection('proyectos')">Proyectos</a>
+  <a href="#" onclick="switchSection('contacto')">Contacto</a>
 </div>
 
-<div id="Tab1" class="tabcontent">
-  <h3>Pestaña 1</h3>
-  <p>Contenido de la primera pestaña.</p>
+<div id="inicio" class="section active">
+  <h1>Inicio</h1>
+  <p>¡Bienvenidos a mi blog! Aquí compartiré mis ideas, proyectos y más.</p>
 </div>
 
-<div id="Tab2" class="tabcontent">
-  <h3>Pestaña 2</h3>
-  <p>Contenido de la segunda pestaña.</p>
+<div id="proyectos" class="section">
+  <h1>Proyectos</h1>
+  <p>Esta es la sección de proyectos. Aquí puedes encontrar algunos de mis trabajos recientes.</p>
 </div>
 
-<div id="Tab3" class="tabcontent">
-  <h3>Pestaña 3</h3>
-  <p>Contenido de la tercera pestaña.</p>
+<div id="contacto" class="section">
+  <h1>Contacto</h1>
+  <p>Si quieres ponerte en contacto conmigo, envíame un mensaje a [mi correo](mailto:correo@example.com).</p>
 </div>
 
 <script>
-function openTab(evt, tabName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
+function switchSection(sectionId) {
+  var sections = document.getElementsByClassName("section");
+  for (var i = 0; i < sections.length; i++) {
+    sections[i].classList.remove("active");
   }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(tabName).style.display = "block";
-  evt.currentTarget.className += " active";
+  document.getElementById(sectionId).classList.add("active");
 }
 </script>
-
-
-<style>
-.tabs {
-  overflow: hidden;
-  background-color: #f1f1f1;
-}
-
-.tablinks {
-  background-color: #ddd;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s;
-  font-size: 17px;
-}
-
-.tablinks:hover {
-  background-color: #ccc;
-}
-
-.tablinks.active {
-  background-color: #7bbfff;
-}
-
-.tabcontent {
-  display: none;
-  padding: 20px;
-  border-top: none;
-}
-
-.tabcontent h3 {
-  margin-top: 0;
-}
-</style>
