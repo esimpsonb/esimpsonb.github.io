@@ -45,3 +45,40 @@ function openTab(evt, tabName) {
   evt.currentTarget.className += " active";
 }
 </script>
+
+
+<style>
+.tabs {
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+.tablinks {
+  background-color: #ddd;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+.tablinks:hover {
+  background-color: #ccc;
+}
+
+.tablinks.active {
+  background-color: #7bbfff;
+}
+
+.tabcontent {
+  display: none;
+  padding: 20px;
+  border-top: none;
+}
+
+.tabcontent h3 {
+  margin-top: 0;
+}
+</style>
