@@ -1,0 +1,37 @@
+<style>
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+  background-color: #575757;
+}
+</style>
+
+<div class="navbar">
+  <a href="index.md">Inicio</a>
+  <a href="proyectos.md">Proyectos</a>
+  <a href="contacto.md">Contacto</a>
+</div>
+
+<div id="proyectos">
+  <h1>Proyectos</h1>
+  <p>Esta es la sección de proyectos. Aquí puedes encontrar algunos de mis trabajos recientes.</p>
+</div>
